@@ -16,9 +16,9 @@ Channels are defined @Output (pruducing) or @Input (consuming); Channel name by 
 
 Channels are pointed to the underlying queue in the appplication.properties, as following
 
-''''
+````
 spring.cloud.stream.bindings.input.destination=employeeRegChannel
-''''
+````
 input here is the channel name; which is pointed to an underlying queue.
 
 Futher Task: 
