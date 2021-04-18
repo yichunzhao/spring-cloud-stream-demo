@@ -19,7 +19,7 @@ Channels are pointed to the underlying queue in the appplication.properties, as 
 ````
 spring.cloud.stream.bindings.input.destination=employeeRegChannel
 ````
-input here is the channel name; which is pointed to an underlying queue.
+input here is the channel name; which is pointed to an underlying queue name. producer and consumer are linked together as their channels pointing to the same queue name. 
 
 Futher Task: 
 I need to explore the Spring-cloud-Stream latest version, for there are a lot of updates. 
