@@ -12,14 +12,16 @@ Consumer defines sink, channel, and then enable binding(@EnableBinding(Input.cla
 
 Source and Sink are interfaced with channels, i,e. interface methods; In runtime, Spring use them to generate proxy instances, which handle the dirty works with the messaging system.
 
-Channels are defined @Output (pruducing) or @Input (consuming); Channel name by default is the method name; or maybe cusotermized as @OutPout("xxxChannel") or @Input("yyyChannel");
+Channels are defined @Output (pruducing) or @Input (consuming); Channel name by default is the method name; or cusotermized as @OutPout("xxx") or @Input("yyy");
 
-Channels are pointed to the underlying queue in the appplication.properties, as following
+Pointing channels to the underlying mmessage queue in the appplication.properties, as following
 
 ````
-spring.cloud.stream.bindings.input.destination=employeeRegChannel
+spring.cloud.stream.bindings.xxx.destination=employeeRegChannel
+
+spring.cloud.stream.bindings.yyy.destination=employeeRegChannel
 ````
-input here is the channel name; which is pointed to an underlying queue name. producer and consumer are linked together as their channels pointing to the same queue name. 
+thus producer and consumer are linked together for their channels pointing to the same queue name. 
 
 Futher Task: 
 I need to explore the Spring-cloud-Stream latest version, for there are a lot of updates. 
