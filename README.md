@@ -10,7 +10,7 @@ The following diagram illustrates the structure as using the Spring cloud stream
 Producer defines source, channel, and then enable binding(@EnableBinding(Source.class)) the channel to the underlying queue.
 Consumer defines sink, channel, and then enable binding(@EnableBinding(Input.class)) the channel to the underlying queue.
 
-Source and Sink are interfaced with channels, i,e. interface methods; In runtime, Spring use them to generate proxy instances, which handle the dirty works with the messaging system.
+Source and Sink are interfaced with channels, i,e. interface methods; In runtime, Spring use them to generate proxies, which handle the dirty works with the messaging system.
 
 Channels are defined @Output (pruducing) or @Input (consuming); Channel name by default is the method name; or cusotermized as @OutPout("xxx") or @Input("yyy");
 
@@ -21,7 +21,7 @@ spring.cloud.stream.bindings.xxx.destination=employeeRegChannel
 
 spring.cloud.stream.bindings.yyy.destination=employeeRegChannel
 ````
-thus producer and consumer are linked together for their channels pointing to the same queue name. 
+thus producer and consumer are linked together through a common queue. 
 
 Futher Task: 
 I need to explore the Spring-cloud-Stream latest version, for there are a lot of updates. 
